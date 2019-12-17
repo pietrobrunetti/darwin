@@ -7,7 +7,7 @@ import Keys._
   */
 object Dependencies {
 
-  lazy val scalatest = "org.scalatest" %% "scalatest" % "3.0.4" % "test"
+  lazy val scalatest = "org.scalatest" %% "scalatest" % "3.1.0" % "test"
   lazy val avro = "org.apache.avro" % "avro" % "1.8.2"
   lazy val typesafe_config = "com.typesafe" % "config" % "1.3.1"
   lazy val avro4s = "com.sksamuel.avro4s" %% "avro4s-core" % "1.8.3"
@@ -24,12 +24,12 @@ object Dependencies {
   lazy val postgres_embedded = "ru.yandex.qatools.embed" % "postgresql-embedded" % "2.10" % Test
 
   lazy val akka = Seq(
-    "com.typesafe.akka" %% "akka-stream" % "2.5.20",
-    "com.typesafe.akka" %% "akka-slf4j" % "2.5.20",
-    "com.typesafe.akka" %% "akka-stream-testkit" % "2.5.20" % Test,
-    "com.typesafe.akka" %% "akka-http" % "10.1.7",
-    "com.typesafe.akka" %% "akka-http-testkit" % "10.1.7" % Test,
-    "com.typesafe.akka" %% "akka-http-spray-json" % "10.1.7"
+    "com.typesafe.akka" %% "akka-stream" % "2.5.26",
+    "com.typesafe.akka" %% "akka-slf4j" % "2.5.26",
+    "com.typesafe.akka" %% "akka-stream-testkit" % "2.5.26" % Test,
+    "com.typesafe.akka" %% "akka-http" % "10.1.11",
+    "com.typesafe.akka" %% "akka-http-testkit" % "10.1.11" % Test,
+    "com.typesafe.akka" %% "akka-http-spray-json" % "10.1.11"
   )
 
   lazy val logback = "ch.qos.logback" % "logback-classic" % "1.2.3"
@@ -51,7 +51,7 @@ object Dependencies {
     ("org.apache.hadoop" % "hadoop-hdfs" % "2.6.0").classifier("tests") % "test",
     "org.apache.hadoop" % "hadoop-hdfs" % "2.6.0"% "test")
 
-  lazy val httpClient = "org.scalaj" %% "scalaj-http" % "2.4.1"
+  lazy val httpClient = "org.scalaj" %% "scalaj-http" % "2.4.2"
 
   lazy val wireMock = Seq("com.github.tomakehurst" % "wiremock-jre8" % "2.21.0" % Test,
                           "xmlunit" % "xmlunit" % "1.6" % Test)
