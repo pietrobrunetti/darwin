@@ -2,12 +2,9 @@ package it.agilelab.darwin.common
 
 package object compat {
   def toScala[A](jIterable: java.lang.Iterable[A]): scala.collection.Iterable[A] = {
-    val iterator = jIterable.iterator()
-    val builder = Iterable.newBuilder[A]
-    while (iterator.hasNext) {
-      builder += iterator.next()
+    new Iterable[A] {
+      def iterator: scala.collection.Iterator[A] = toScala(jIterable.iterator())
     }
-    builder.result()
   }
 
   def toScala[A](jIterator: java.util.Iterator[A]): scala.collection.Iterator[A] = {
